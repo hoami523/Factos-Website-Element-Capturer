@@ -1,4 +1,4 @@
-// Element Capture Pro — content script（注入所有 frame，包括 iframe）
+// Factos Website Element Capturer — content script（注入所有 frame，包括 iframe）
 (() => {
   'use strict';
 
@@ -76,7 +76,7 @@
 
   // 注入式 UI 样式（全部用 data-ecp* 属性选择器隔离，避免污染宿主页面）
   const UI_CSS = `
-  /* Element Capture Pro — 注入式 UI */
+  /* Factos Website Element Capturer — 注入式 UI */
   @keyframes ecpRise {
     from { opacity: 0; transform: translate(-50%, 14px); }
     to { opacity: 1; transform: translate(-50%, 0); }
