@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Element Capture 测试页</title>
+</head>
+<body>
+  <h1>Element Capture Pro 测试页</h1>
+  <p>以下是顶层元素：</p>
+  <button id="login-btn" class="btn primary" data-testid="loginButton">登录</button>
+  <input id="username" name="username" placeholder="用户名">
+  <a href="https://example.com">跳转链接</a>
+
+  <h2>同域 iframe（一层）</h2>
+  <iframe id="frame-1" src="iframe1.html" width="520" height="190"></iframe>
+
+  <h2>srcdoc iframe</h2>
+  <iframe id="frame-srcdoc" srcdoc="<button id='sd-btn' data-testid='sdButton'>srcdoc 里的按钮</button><input name='sd-input' placeholder='srcdoc 输入框'>"></iframe>
+
+  <p>提示：先在 chrome://extensions 里为本扩展开启「允许访问文件网址」。</p>
+  <div id="click-count" hidden>0</div>
+  <script>
+    window.__clicks = 0;
+    document.addEventListener('click', (e) => {
+      if (e.target && e.target.id === 'login-btn') {
+        window.__clicks++;
+        const el = document.getElementById('click-count');
+        if (el) el.textContent = window.__clicks;
+      }
+    });
+  </script>
+</body>
+</html>

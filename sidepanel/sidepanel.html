@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M12 2.8v2.8M12 18.4v2.8M2.8 12h2.8M18.4 12h2.8"></path>
+          <path d="M8.6 8.6 5 5M15.4 8.6 19 5M8.6 15.4 5 19M15.4 15.4 19 19" opacity=".5"></path>
+        </svg>
+      </span>
+      <div class="brand-text">
+        <div class="title">Element Capture</div>
+        <div class="subtitle">精准元素定位 · 支持 iframe</div>
+      </div>
+    </div>
+    <span id="version" class="chip" title="扩展版本"></span>
+  </header>
+
+  <section id="notice" class="notice hidden" role="status"></section>
+
+  <section class="control">
+    <div class="btn-row">
+      <button id="pickBtn" class="btn btn-primary">
+        <span class="dot"></span>
+        <span id="pickLabel">开始拾取</span>
+      </button>
+    </div>
+    <p id="statusLine" class="status" data-mode="idle">
+      <span class="status-dot"></span>
+      <span id="statusText">空闲 · Alt+点击捕捉元素</span>
+    </p>
+  </section>
+
+  <div class="list-head">
+    <span class="list-title">元素库</span>
+    <span id="count" class="count">0</span>
+  </div>
+
+  <div id="list" class="list"></div>
+
+  <div class="options">
+    <label class="option">
+      <input type="checkbox" id="autoClearChk">
+      <span class="switch" aria-hidden="true"></span>
+      <span class="option-text">导出后自动清空元素库</span>
+    </label>
+    <label class="option">
+      <input type="checkbox" id="autoFocusChk">
+      <span class="switch" aria-hidden="true"></span>
+      <span class="option-text">捕捉后弹出命名窗（强制命名）</span>
+    </label>
+    <div class="format-row">
+      <span class="option-text">导出格式</span>
+      <select id="exportFormat" class="format-select">
+        <option value="text">简洁文本 · name/css/xpath/frames</option>
+        <option value="simple">简洁 JSON · 仅 4 个字段</option>
+        <option value="full">完整 JSON · 含全部细节</option>
+      </select>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <button id="exportBtn" class="foot-btn">导出</button>
+    <button id="copyAllBtn" class="foot-btn">复制全部</button>
+    <button id="clearBtn" class="foot-btn danger">清空</button>
+  </footer>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

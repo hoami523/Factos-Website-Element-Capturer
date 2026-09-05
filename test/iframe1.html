@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>iframe 1</title>
+</head>
+<body>
+  <p>iframe 1（同域一层）</p>
+  <button id="f1-btn" class="btn" data-testid="f1Btn">iframe1 按钮</button>
+  <input id="f1-input" name="f1" placeholder="iframe1 输入框">
+
+  <h3>嵌套第二层 iframe</h3>
+  <iframe id="frame-2" src="iframe2.html" width="440" height="150"></iframe>
+  <div id="f1-click-count" hidden>0</div>
+  <script>
+    window.__f1clicks = 0;
+    document.addEventListener('click', (e) => {
+      if (e.target && e.target.id === 'f1-btn') {
+        window.__f1clicks++;
+        const el = document.getElementById('f1-click-count');
+        if (el) el.textContent = window.__f1clicks;
+      }
+    });
+  </script>
+</body>
+</html>

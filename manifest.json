@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Element Capture Pro",
+  "version": "2.2.0",
+  "description": "点击捕捉网页元素，一键生成 CSS / XPath / Playwright / Selenium 定位器，支持 iframe 嵌套，导出简洁文本或结构化 JSON 供脚本使用。",
+  "permissions": ["activeTab", "tabs", "storage", "downloads", "sidePanel", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Element Capture Pro"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/sidepanel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
