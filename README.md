@@ -1,4 +1,4 @@
-# Element Capture Pro
+# Factos Website Element Capturer
 
 一个面向 Chrome / Chromium 系浏览器（Chrome、Edge、Brave、Opera 等）的**元素捕捉扩展**：Alt+点击捕捉网页元素，自动生成 **CSS 选择器 + XPath**，并附带 Playwright / Selenium 完整表达式；支持多层 iframe 嵌套（含跨域）。捕捉结果累积成「元素库」，可导出为**简洁文本 / 简洁 JSON**（直接拿到 CSS、XPath，无需写解析脚本），也可导出完整 JSON。
 
