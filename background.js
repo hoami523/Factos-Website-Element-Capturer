@@ -1,4 +1,4 @@
-// Factos Website Element Capturer — service worker（MV3）
+// Factos Website Factos Website Element Capturerr — service worker（MV3）
 
 const DEFAULT_STATE = { elements: [], pickState: {} };
 

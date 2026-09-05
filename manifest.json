@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Factos Website Element Capturer",
+  "name": "Factos Website Factos Website Element Capturerr",
   "version": "2.2.0",
   "description": "点击捕捉网页元素，一键生成 CSS / XPath / Playwright / Selenium 定位器，支持 iframe 嵌套，导出简洁文本或结构化 JSON 供脚本使用。",
   "permissions": ["activeTab", "tabs", "storage", "downloads", "sidePanel", "scripting"],
@@ -9,7 +9,7 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Factos Website Element Capturer"
+    "default_title": "Factos Website Factos Website Element Capturerr"
   },
   "side_panel": {
     "default_path": "sidepanel/sidepanel.html"
